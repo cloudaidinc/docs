@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Zlnk",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "https://zlnk.com/assets/favicon/apple-icon-57x57.png",
+    "light": "https://zlnk.com/assets/favicon/apple-icon-57x57.png"
   },
   "favicon": "/favicon.svg",
   "colors": {

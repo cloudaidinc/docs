@@ -1,12 +1,8 @@
 {
-  "openapi": "3.1.0",
-  "x-stoplight": {
-    "id": "27pnrdiugttpa"
-  },
+  "openapi": "3.0.0",
   "info": {
     "title": "Zlnk",
     "version": "1.0",
-    "summary": "Zlnk API",
     "contact": {
       "url": "https://zlnk.io/home"
     }
@@ -47,20 +43,17 @@
                             "type": "string"
                           },
                           "linkTags": {
-                            "type": [
-                              "array",
-                              "null"
-                            ],
+                            "type": "string",
                             "items": {
                               "type": "object",
                               "properties": {}
                             }
                           },
                           "smartParams": {
-                            "type": "null"
+                            "type": "string"
                           },
                           "autoExpire": {
-                            "type": "null"
+                            "type": "string"
                           },
                           "autoExpireValue": {
                             "type": "integer"
@@ -69,10 +62,10 @@
                             "type": "string"
                           },
                           "autoExpireTarget": {
-                            "type": "null"
+                            "type": "string"
                           },
                           "smartLink": {
-                            "type": "null"
+                            "type": "string"
                           },
                           "created_at": {
                             "type": "string"
@@ -103,10 +96,10 @@
                     "Example 1": {
                       "data": [
                         {
-                          "long_url": "https://www.rezamousavi.com/",
-                          "short_id": "bAEGxH",
+                          "long_url": "https://www.zlnk.com/",
+                          "short_id": "xAmbdhsf",
                           "status": true,
-                          "friendlyName": "Reza Mousavi website - Instagram",
+                          "friendlyName": "Zlnk Website",
                           "linkTags": [],
                           "smartParams": null,
                           "autoExpire": null,
@@ -123,10 +116,10 @@
                           "analyticPassword": false
                         },
                         {
-                          "long_url": "https://www.rezamousavi.com/",
+                          "long_url": "https://www.zlnk.com/",
                           "short_id": "2yUx1D",
                           "status": true,
-                          "friendlyName": "Reza Mousavi - Twitter",
+                          "friendlyName": "Zlnk Website",
                           "linkTags": null,
                           "smartParams": null,
                           "autoExpire": null,
@@ -150,9 +143,6 @@
           }
         },
         "operationId": "get-publicapi-services-link",
-        "x-stoplight": {
-          "id": "4rq1rt766cr0y"
-        },
         "description": "Retrieve list of all links"
       },
       "get - copy": {
@@ -166,9 +156,6 @@
         "tags": [],
         "responses": {},
         "operationId": "post-publicapi-services-link",
-        "x-stoplight": {
-          "id": "29rzbefoxo1j7"
-        },
         "description": "Create a new link",
         "requestBody": {
           "content": {
@@ -181,51 +168,30 @@
                 "properties": {
                   "link": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "bcivpa0drss7t"
-                    },
                     "description": "Destination URL"
                   },
                   "friendlyName": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "0qtm2zqcyema0"
-                    },
                     "description": "Friendly name"
                   },
                   "linkTags": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "x22hj3e6cmqst"
-                    },
                     "description": "Tags comma separated"
                   },
                   "short_id": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "hz6s06q8hq6u4"
-                    },
                     "description": "Short link slug"
                   },
                   "autoExpire": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "s4z21e3wvfere"
-                    },
                     "description": "Auto expire"
                   },
                   "autoExpireTarget": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "zvqwf05v41jt1"
-                    },
                     "description": "Auto expire target"
                   },
                   "domain": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "odc87ac38id70"
-                    },
                     "description": "Domain of short link"
                   }
                 }
@@ -244,24 +210,6 @@
     },
     "/publicapi/services/link/{link_id}": {
       "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "link_id",
-          "in": "path",
-          "required": true,
-          "description": "Link slug"
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "link_id",
-          "in": "path",
-          "required": true,
-          "description": "Link slug"
-        },
         {
           "schema": {
             "type": "string"
@@ -308,10 +256,10 @@
                             }
                           },
                           "smartParams": {
-                            "type": "null"
+                            "type": "string"
                           },
                           "autoExpire": {
-                            "type": "null"
+                            "type": "string"
                           },
                           "autoExpireValue": {
                             "type": "integer"
@@ -320,10 +268,10 @@
                             "type": "string"
                           },
                           "autoExpireTarget": {
-                            "type": "null"
+                            "type": "string"
                           },
                           "smartLink": {
-                            "type": "null"
+                            "type": "string"
                           },
                           "created_at": {
                             "type": "string"
@@ -354,10 +302,10 @@
                     "Example 1": {
                       "data": [
                         {
-                          "long_url": "https://www.rezamousavi.com/",
-                          "short_id": "bAEGxH",
+                          "long_url": "https://www.zlnk.com/",
+                          "short_id": "xfyhFsf",
                           "status": true,
-                          "friendlyName": "Reza Mousavi website - Instagram",
+                          "friendlyName": "Zlnk Website",
                           "linkTags": [],
                           "smartParams": null,
                           "autoExpire": null,
@@ -382,9 +330,6 @@
           }
         },
         "operationId": "get-publicapi-services-link-link_id",
-        "x-stoplight": {
-          "id": "8qz7vrwnxad1o"
-        },
         "description": "Retrieve a link"
       },
       "put": {
@@ -392,9 +337,6 @@
         "tags": [],
         "responses": {},
         "operationId": "put-publicapi-services-link-link_id",
-        "x-stoplight": {
-          "id": "xg3k6vopozor8"
-        },
         "description": "Update a link",
         "requestBody": {
           "content": {
@@ -404,37 +346,22 @@
                 "properties": {
                   "link": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "t7gvoavptvk0z"
-                    },
                     "description": "Destination URL"
                   },
                   "friendlyName": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "6kj5a8gtxx616"
-                    },
                     "description": "Friendly name"
                   },
                   "linkTags": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "0vhi4whkf1grs"
-                    },
                     "description": "Tags"
                   },
                   "autoExpire": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "sthk6neygcrjh"
-                    },
                     "description": "Auto expire"
                   },
                   "autoExpireTarget": {
                     "type": "string",
-                    "x-stoplight": {
-                      "id": "da0yvp1x3jgvc"
-                    },
                     "description": "Auto expire target"
                   }
                 }
@@ -448,9 +375,6 @@
         "tags": [],
         "responses": {},
         "operationId": "delete-publicapi-services-link-link_id",
-        "x-stoplight": {
-          "id": "fga2qjdr92sgw"
-        },
         "description": "Delete a link"
       }
     }

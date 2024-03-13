@@ -145,12 +145,6 @@
         "operationId": "get-publicapi-services-link",
         "description": "Retrieve list of all links"
       },
-      "get - copy": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {},
-        "operationId": "get-publicapi-services-link"
-      },
       "post": {
         "summary": "Create a new link",
         "tags": [],

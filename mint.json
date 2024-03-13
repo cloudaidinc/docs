@@ -5,7 +5,7 @@
     "dark": "https://zlnk.com/assets/favicon/apple-icon-57x57.png",
     "light": "https://zlnk.com/assets/favicon/apple-icon-57x57.png"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "https://zlnk.com/assets/favicon/favicon-32x32.png",
   "colors": {
     "primary": "#0D9373",
     "light": "#07C983",
@@ -41,20 +41,7 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
-        "quickstart",
-        "development"
-      ]
-    },
-    {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "introduction"
       ]
     },
     {

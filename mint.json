@@ -47,10 +47,12 @@
       ]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Endpoints",
       "pages": [
         "api-reference/endpoint/get",
         "api-reference/endpoint/create",
+        "api-reference/endpoint/getalink",
+        "api-reference/endpoint/update",
         "api-reference/endpoint/delete"
       ]
     }

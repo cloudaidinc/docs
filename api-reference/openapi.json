@@ -1,195 +1,474 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "27pnrdiugttpa"
+  },
   "info": {
-    "title": "OpenAPI Plant Store",
-    "description": "A sample API that uses a plant store as an example to demonstrate features in the OpenAPI specification",
-    "license": {
-      "name": "MIT"
-    },
-    "version": "1.0.0"
+    "title": "Zlnk",
+    "version": "1.0",
+    "summary": "Zlnk API",
+    "contact": {
+      "url": "https://zlnk.io/home"
+    }
   },
   "servers": [
     {
-      "url": "http://sandbox.mintlify.com"
-    }
-  ],
-  "security": [
-    {
-      "bearerAuth": []
+      "url": "https://zlnk.io"
     }
   ],
   "paths": {
-    "/plants": {
+    "/publicapi/services/link": {
       "get": {
-        "description": "Returns all plants from the system that the user has access to",
-        "parameters": [
-          {
-            "name": "limit",
-            "in": "query",
-            "description": "The maximum number of results to return",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
+        "summary": "Retrieve list of links",
+        "tags": [],
         "responses": {
           "200": {
-            "description": "Plant response",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/Plant"
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "long_url": {
+                            "type": "string"
+                          },
+                          "short_id": {
+                            "type": "string"
+                          },
+                          "status": {
+                            "type": "boolean"
+                          },
+                          "friendlyName": {
+                            "type": "string"
+                          },
+                          "linkTags": {
+                            "type": [
+                              "array",
+                              "null"
+                            ],
+                            "items": {
+                              "type": "object",
+                              "properties": {}
+                            }
+                          },
+                          "smartParams": {
+                            "type": "null"
+                          },
+                          "autoExpire": {
+                            "type": "null"
+                          },
+                          "autoExpireValue": {
+                            "type": "integer"
+                          },
+                          "websiteIcon": {
+                            "type": "string"
+                          },
+                          "autoExpireTarget": {
+                            "type": "null"
+                          },
+                          "smartLink": {
+                            "type": "null"
+                          },
+                          "created_at": {
+                            "type": "string"
+                          },
+                          "hit_count": {
+                            "type": "integer"
+                          },
+                          "updated_at": {
+                            "type": "string"
+                          },
+                          "internalLink": {
+                            "type": "boolean"
+                          },
+                          "domain": {
+                            "type": "string"
+                          },
+                          "password": {
+                            "type": "boolean"
+                          },
+                          "analyticPassword": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "x-examples": {
+                    "Example 1": {
+                      "data": [
+                        {
+                          "long_url": "https://www.rezamousavi.com/",
+                          "short_id": "bAEGxH",
+                          "status": true,
+                          "friendlyName": "Reza Mousavi website - Instagram",
+                          "linkTags": [],
+                          "smartParams": null,
+                          "autoExpire": null,
+                          "autoExpireValue": 0,
+                          "websiteIcon": "",
+                          "autoExpireTarget": null,
+                          "smartLink": null,
+                          "created_at": "2023-08-05T15:13:48.999Z",
+                          "hit_count": 500,
+                          "updated_at": "2023-08-05T15:15:27.779Z",
+                          "internalLink": false,
+                          "domain": "zlnk.io",
+                          "password": false,
+                          "analyticPassword": false
+                        },
+                        {
+                          "long_url": "https://www.rezamousavi.com/",
+                          "short_id": "2yUx1D",
+                          "status": true,
+                          "friendlyName": "Reza Mousavi - Twitter",
+                          "linkTags": null,
+                          "smartParams": null,
+                          "autoExpire": null,
+                          "autoExpireValue": 0,
+                          "websiteIcon": "",
+                          "autoExpireTarget": null,
+                          "smartLink": null,
+                          "created_at": "2023-08-05T15:16:39.276Z",
+                          "hit_count": 50,
+                          "internalLink": false,
+                          "domain": "zlnk.io",
+                          "password": false,
+                          "analyticPassword": false
+                        }
+                      ]
+                    }
                   }
                 }
               }
             }
-          },
-          "400": {
-            "description": "Unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
+          }
+        },
+        "operationId": "get-publicapi-services-link",
+        "x-stoplight": {
+          "id": "4rq1rt766cr0y"
+        },
+        "description": "Retrieve list of all links"
+      },
+      "get - copy": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-publicapi-services-link"
+      },
+      "post": {
+        "summary": "Create a new link",
+        "tags": [],
+        "responses": {},
+        "operationId": "post-publicapi-services-link",
+        "x-stoplight": {
+          "id": "29rzbefoxo1j7"
+        },
+        "description": "Create a new link",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "link"
+                ],
+                "properties": {
+                  "link": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "bcivpa0drss7t"
+                    },
+                    "description": "Destination URL"
+                  },
+                  "friendlyName": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "0qtm2zqcyema0"
+                    },
+                    "description": "Friendly name"
+                  },
+                  "linkTags": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "x22hj3e6cmqst"
+                    },
+                    "description": "Tags comma separated"
+                  },
+                  "short_id": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "hz6s06q8hq6u4"
+                    },
+                    "description": "Short link slug"
+                  },
+                  "autoExpire": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "s4z21e3wvfere"
+                    },
+                    "description": "Auto expire"
+                  },
+                  "autoExpireTarget": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "zvqwf05v41jt1"
+                    },
+                    "description": "Auto expire target"
+                  },
+                  "domain": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "odc87ac38id70"
+                    },
+                    "description": "Domain of short link"
+                  }
                 }
               }
             }
           }
         }
       },
-      "post": {
-        "description": "Creates a new plant in the store",
+      "servers": [
+        {
+          "url": "https://zlnk.io/",
+          "description": ""
+        }
+      ],
+      "parameters": []
+    },
+    "/publicapi/services/link/{link_id}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "link_id",
+          "in": "path",
+          "required": true,
+          "description": "Link slug"
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "link_id",
+          "in": "path",
+          "required": true,
+          "description": "Link slug"
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "link_id",
+          "in": "path",
+          "required": true,
+          "description": "Link slug"
+        }
+      ],
+      "get": {
+        "summary": "Retrieve a link",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "long_url": {
+                            "type": "string"
+                          },
+                          "short_id": {
+                            "type": "string"
+                          },
+                          "status": {
+                            "type": "boolean"
+                          },
+                          "friendlyName": {
+                            "type": "string"
+                          },
+                          "linkTags": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {}
+                            }
+                          },
+                          "smartParams": {
+                            "type": "null"
+                          },
+                          "autoExpire": {
+                            "type": "null"
+                          },
+                          "autoExpireValue": {
+                            "type": "integer"
+                          },
+                          "websiteIcon": {
+                            "type": "string"
+                          },
+                          "autoExpireTarget": {
+                            "type": "null"
+                          },
+                          "smartLink": {
+                            "type": "null"
+                          },
+                          "created_at": {
+                            "type": "string"
+                          },
+                          "hit_count": {
+                            "type": "integer"
+                          },
+                          "updated_at": {
+                            "type": "string"
+                          },
+                          "internalLink": {
+                            "type": "boolean"
+                          },
+                          "domain": {
+                            "type": "string"
+                          },
+                          "password": {
+                            "type": "boolean"
+                          },
+                          "analyticPassword": {
+                            "type": "boolean"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "x-examples": {
+                    "Example 1": {
+                      "data": [
+                        {
+                          "long_url": "https://www.rezamousavi.com/",
+                          "short_id": "bAEGxH",
+                          "status": true,
+                          "friendlyName": "Reza Mousavi website - Instagram",
+                          "linkTags": [],
+                          "smartParams": null,
+                          "autoExpire": null,
+                          "autoExpireValue": 0,
+                          "websiteIcon": "",
+                          "autoExpireTarget": null,
+                          "smartLink": null,
+                          "created_at": "2023-08-05T15:13:48.999Z",
+                          "hit_count": 500,
+                          "updated_at": "2023-08-05T15:15:27.779Z",
+                          "internalLink": false,
+                          "domain": "zlnk.io",
+                          "password": false,
+                          "analyticPassword": false
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-publicapi-services-link-link_id",
+        "x-stoplight": {
+          "id": "8qz7vrwnxad1o"
+        },
+        "description": "Retrieve a link"
+      },
+      "put": {
+        "summary": "Update a link",
+        "tags": [],
+        "responses": {},
+        "operationId": "put-publicapi-services-link-link_id",
+        "x-stoplight": {
+          "id": "xg3k6vopozor8"
+        },
+        "description": "Update a link",
         "requestBody": {
-          "description": "Plant to add to the store",
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPlant"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "plant response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Plant"
-                }
-              }
-            }
-          },
-          "400": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
+                "type": "object",
+                "properties": {
+                  "link": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "t7gvoavptvk0z"
+                    },
+                    "description": "Destination URL"
+                  },
+                  "friendlyName": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "6kj5a8gtxx616"
+                    },
+                    "description": "Friendly name"
+                  },
+                  "linkTags": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "0vhi4whkf1grs"
+                    },
+                    "description": "Tags"
+                  },
+                  "autoExpire": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "sthk6neygcrjh"
+                    },
+                    "description": "Auto expire"
+                  },
+                  "autoExpireTarget": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "da0yvp1x3jgvc"
+                    },
+                    "description": "Auto expire target"
+                  }
                 }
               }
             }
           }
         }
-      }
-    },
-    "/plants/{id}": {
+      },
       "delete": {
-        "description": "Deletes a single plant based on the ID supplied",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "ID of plant to delete",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "Plant deleted",
-            "content": {}
-          },
-          "400": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        }
+        "summary": "Delete a link",
+        "tags": [],
+        "responses": {},
+        "operationId": "delete-publicapi-services-link-link_id",
+        "x-stoplight": {
+          "id": "fga2qjdr92sgw"
+        },
+        "description": "Delete a link"
       }
     }
   },
   "components": {
-    "schemas": {
-      "Plant": {
-        "required": [
-          "name"
-        ],
-        "type": "object",
-        "properties": {
-          "name": {
-            "description": "The name of the plant",
-            "type": "string"
-          },
-          "tag": {
-            "description": "Tag to specify the type",
-            "type": "string"
-          }
-        }
-      },
-      "NewPlant": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/Plant"
-          },
-          {
-            "required": [
-              "id"
-            ],
-            "type": "object",
-            "properties": {
-              "id": {
-                "description": "Identification number of the plant",
-                "type": "integer",
-                "format": "int64"
-              }
-            }
-          }
-        ]
-      },
-      "Error": {
-        "required": [
-          "error",
-          "message"
-        ],
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "message": {
-            "type": "string"
-          }
-        }
-      }
-    },
+    "schemas": {},
     "securitySchemes": {
-      "bearerAuth": {
-        "type": "http",
-        "scheme": "bearer"
+      "authorization": {
+        "name": "authorization",
+        "type": "apiKey",
+        "in": "header",
+        "description": "Obtain your API key from https://zlnk.com/home/settings"
       }
     }
-  }
+  },
+  "security": [
+    {
+      "authorization": []
+    }
+  ]
 }

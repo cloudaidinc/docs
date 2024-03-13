@@ -29,7 +29,7 @@
     {
       "name": "Documentation",
       "icon": "book-open-cover",
-      "url": "https://docs.zlnk.com"
+      "url": "https://mintlify.com/docs"
     },
     {
       "name": "Blog",
@@ -73,8 +73,6 @@
     }
   ],
   "footerSocials": {
-    "twitter": "https://twitter.com/mintlify",
-    "github": "https://github.com/mintlify",
-    "linkedin": "https://www.linkedin.com/company/mintsearch"
+    "twitter": "https://twitter.com/zlnk_x"
   }
 }

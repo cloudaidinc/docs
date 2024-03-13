@@ -147,8 +147,11 @@
       },
       "post": {
         "summary": "Create a new link",
-        "tags": [],
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
         "operationId": "post-publicapi-services-link",
         "description": "Create a new link",
         "requestBody": {
@@ -329,7 +332,11 @@
       "put": {
         "summary": "Update a link",
         "tags": [],
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
         "operationId": "put-publicapi-services-link-link_id",
         "description": "Update a link",
         "requestBody": {
@@ -367,7 +374,11 @@
       "delete": {
         "summary": "Delete a link",
         "tags": [],
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
         "operationId": "delete-publicapi-services-link-link_id",
         "description": "Delete a link"
       }
